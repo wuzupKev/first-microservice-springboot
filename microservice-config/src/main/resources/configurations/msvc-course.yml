@@ -1,0 +1,25 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: msvc-course
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/coursedb
+    username: postgres
+    password: metedata
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
